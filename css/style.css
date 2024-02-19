@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+
+	margin: 0;
+	padding: 0;
+	/* list-style: none; */
+}
+:root {
+	--color-primary: #234894;
+	--color-secondary: #219f95;
+	--color-secondary-hover: #1a837a;
+	--color-secondary-dark: #afcedd;
+	--color-body: #1e1e1e;
+	--color-white: #fff;
+	--color-text: #696969 696969;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	padding: 3rem;
+}
+
+.title {
+	font-size: 2.2rem;
+	font-weight: 22px;
+	color: var(--color-body);
+}
+
+.block-plan {
+	display: grid;
+	gap: 2rem;
+}
+.plan {
+	max-width: 500px;
+}
+
+.card {
+	border-radius: 16px;
+}
+.card__body {
+	padding: 2rem;
+}
+.card__number {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.block__number {
+	background-color: var(--color-secondary-dark);
+	width: 4rem;
+	height: 4rem;
+	justify-self: center;
+	align-self: center;
+	border-radius: 6px;
+	font-size: 1.8rem;
+	font-weight: 900;
+	color: var(--color-primary);
+	padding-top: 8px;
+}
+.block__header {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	text-align: center;
+	padding-top: 1rem;
+}
+.block__title {
+	padding-inline-start: 1rem;
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: var(--color-primary);
+}
+.block__date {
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: var(--color-text);
+}
+.card__content {
+	display: flex;
+	justify-content: space-between;
+}
+.card__person {
+	display: flex;
+	align-items: center;
+	margin: 3rem 0 0 0;
+}
+.card__pic {
+	margin-left: 1rem;
+	width: 4rem;
+	height: 4rem;
+	max-width: 4rem;
+}
+.card__name {
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: var(--color-body);
+}
+.card__text1 {
+	padding-top: 1.5rem;
+	font-size: 1.8rem;
+	font-weight: 900;
+	color: var(--color-body);
+}
+.card__text2 {
+	padding-top: 1rem;
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: var(--color-text);
+}
+.card__name {
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: var(--color-body);
+}
+.card__img {
+	width: 4rem;
+	border-radius: 6px;
+}
+.card__buttons {
+	align-self: flex-end;
+}
+.card__button {
+	background-color: var(--color-secondary);
+	border-radius: 8px;
+	padding: 2rem 1.5rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: var(--color-white);
+	cursor: pointer;
+}
+.card__button:hover {
+	background-color: var(--color-secondary-hover);
+	border-radius: 2px;
+	padding: 2rem 1.5rem;
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: var(--color-white);
+	cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+	.block-plan {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (max-width: 1024px) {
+	.block-plan {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media screen and (max-width: 768px) {
+	.block-plan {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
